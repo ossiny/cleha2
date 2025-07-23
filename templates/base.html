@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'app/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>{% block title %}Job's Website{% endblock title %}</title>
+  </head>
+  <body>
+      <header>
+        <nav>
+            <div class="links"> 
+             
+                <a class="logo" href = "{% url 'subscribe' %}">
+                <img src="{% static 'app/email-icon.svg' %}" alt= ""/>
+              </a>
+              
+              
+               <a class="logo"  href = "{% url 'upload_file' %}">
+                <img src="{% static 'app/upload.svg' %}" alt= ""/>
+              </a>  
+              
+              <a class="logo"  href = "{% url 'jobs_home' %}">
+               <img src="{% static 'app/logo.svg' %}" alt= "" />
+              </a> 
+             
+      
+            
+              
+
+            </div>
+            
+               {% comment %} <span class="material-icons menu" onclick="menu()"> menu </span> {% endcomment %}
+        </nav>
+      </header>
+
+      
+{% comment %}       
+      <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        </style>
+        </head>
+        <body>
+        
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+        <div>This is a div.</div> {% endcomment %}
+    
+
+        <style>
+          .center {
+            text-align: center;
+            color: white;
+          }
+        </style>
+        </head>
+      
+        <body>
+          
+        {% comment %} <h1 class="center">Bienvenu sur "CLEH"</h1> {% endcomment %}
+        {% comment %} <h2 class="center">"Centre Local d'Emploi Haïti (CLEH)"</h2> {% endcomment %}
+        <h1  class="center"; style="color:white; font-family:Display">Centre Local d'Emploi Haïti (CLEH)</h1>
+        <p class="center"; style= "color:gold "> C'est la CLÉ d'or  pour trouver un emploi et ainsi augmenter votre revenu ($)</p>
+        <p class="center"; style= "color:white "> Veuillez-vous inscrire et envoyez-nous vos CV</p>
+        {% comment %}  <a href ="static/app/manuel.pdf" class="btn btn-dark btn-lg text-uppercase px-5                                    
+           mx-3 my-2 " style= "color:gold;"> Télécharger notre brochure d'aide à l'emploi</a> {% endcomment %}
+
+        <div class="row mt-5 text-center ">
+          <div class="col-12 ">
+          <a href ="static/app/manuel.pdf" class="btn btn-dark btn-lg text-uppercase px-5                                    
+           mx-3 my-2 " style= "color:red;"> Télécharger notre brochure d'aide à l'emploi</a>
+        </div>    
+
+        <video autoplay muted loop>
+        <source src="essaie.mp4" type="video/mp4">
+        </video>
+
+        
+      {% block content %}
+    
+      {% endblock content %}
+
+  
+    <footer>
+
+      
+      
+      <div class="container">
+        <div class="grid-4">
+          
+          <div class="link">
+            <h2>Liens utils</h2>
+            <div class= q-link>
+              
+        
+      
+             
+             
+              <a href = "{% url 'jobs_home' %}">Accueil</a>
+              <a href= "{% url 'subscribe' %}">Souscrire</a>
+              <a href = "{% url 'upload_file' %}">Envoyer CV</a>
+              
+             
+              
+              
+              <a href="https://x.com/OssinyBernard">
+                <i class="fa fa-twitter"></i>
+              </a> 
+              
+              <a href="https://web.facebook.com/profile.php?id=61551738096197">
+                <i class="fa fa-facebook"></i>
+              </a> 
+              
+              <p class="flex-grow-1 ">
+                Copyright &copy; 2024 | OssinyB 😠 
+              </p> 
+              
+             
+      
+           
+
+              
+              
+              
+              
+           </div>
+        </div>
+        
+       </div>
+        
+      
+        
+    </footer>
+      
+    
+    
+    
+    
+
+    
+    
+    <script src="{% static 'app/app.js' %}"></script>
+  </body>
+</html>
